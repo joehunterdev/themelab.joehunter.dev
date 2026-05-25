@@ -22,11 +22,11 @@ export default function ThemePanel() {
       {/* Header */}
       <div className="px-4 py-3 border-b border-zinc-800 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded overflow-hidden shrink-0">
+          <div style={{ width: 32, height: 32, borderRadius: 6, overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
             <img
               src="/logo.png"
               alt="ThemeLab"
-              style={{ width: '140%', height: '140%', objectFit: 'cover', objectPosition: 'center', marginLeft: '-20%', marginTop: '-20%' }}
+              style={{ width: '160%', height: '160%', objectFit: 'cover', objectPosition: 'center', position: 'absolute', top: '-30%', left: '-30%' }}
             />
           </div>
           <span className="text-sm font-semibold text-white">ThemeLab</span>

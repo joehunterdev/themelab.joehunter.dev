@@ -25,11 +25,22 @@ export default function TitleBar() {
         themelab.joehunter.dev — ThemeLab
       </div>
 
-      {/* Window controls */}
-      <div className="ml-auto flex items-center gap-2">
+      {/* Logo + Window controls */}
+      <div className="ml-auto flex items-center gap-3">
+        <a href="https://joehunter.es/" target="_blank" rel="noopener noreferrer" title="Joe Hunter — Developer">
+          <div style={{ width: 28, height: 28, borderRadius: 6, overflow: 'hidden', position: 'relative' }}>
+            <img
+              src="/logo_jh.png"
+              alt="Joe Hunter"
+              style={{ width: '170%', height: '170%', objectFit: 'cover', objectPosition: 'center', position: 'absolute', top: '-35%', left: '-35%' }}
+            />
+          </div>
+        </a>
+        <div className="flex items-center gap-2">
         <div className="w-3 h-3 rounded-full bg-yellow-500 opacity-70" />
         <div className="w-3 h-3 rounded-full bg-green-500 opacity-70" />
         <div className="w-3 h-3 rounded-full bg-red-500 opacity-70" />
+        </div>
       </div>
     </div>
   )
