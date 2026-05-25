@@ -4,6 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  build: {
+    reportCompressedSize: false,
+  },
   server: {
     host: 'themelab.joehunter.localhost',
     port: 80,
