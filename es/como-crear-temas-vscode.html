@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo Crear un Tema para VS Code — Guía ThemeLab</title>
+  <meta name="description" content="Aprende a crear un tema personalizado para VS Code desde cero. Entiende los grupos de tokens, roles de color y cómo exportar un JSON válido. Guía por Joe Hunter." />
+  <link rel="canonical" href="https://themelab.joehunter.dev/es/como-crear-temas-vscode.html" />
+  <link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/how-to-create-vscode-themes.html" />
+  <link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/como-crear-temas-vscode.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cómo Crear un Tema para VS Code — Guía ThemeLab" />
+  <meta property="og:description" content="Aprende cómo funcionan los tokens de tema de VS Code y cómo diseñar el tuyo propio con ThemeLab — sin editar JSON." />
+  <meta property="og:url" content="https://themelab.joehunter.dev/es/como-crear-temas-vscode.html" />
+  <meta property="og:site_name" content="ThemeLab" />
+  <meta property="og:image" content="https://themelab.joehunter.dev/example.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cómo Crear un Tema para VS Code — Guía ThemeLab" />
+  <meta name="twitter:description" content="Guía práctica sobre tokens de tema de VS Code y cómo usar ThemeLab para diseñar el tuyo." />
+  <meta name="twitter:image" content="https://themelab.joehunter.dev/example.png" />
+  <meta name="keywords" content="cómo crear tema VS Code, tutorial tema VS Code, tokens tema VS Code, tema VS Code personalizado, personalizar colores VS Code" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d0d0d; color: #d4d4d4; line-height: 1.7; }
+    a { color: #863bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { padding: 1.5rem 2rem; border-bottom: 1px solid #1e1e1e; display: flex; align-items: center; justify-content: space-between; }
+    header .logo { display: flex; align-items: center; gap: .75rem; font-weight: 700; font-size: 1.1rem; color: #fff; }
+    header .logo img { width: 32px; height: auto; }
+    nav a { margin-left: 1.5rem; font-size: .9rem; color: #888; }
+    main { max-width: 760px; margin: 4rem auto; padding: 0 2rem; }
+    h1 { font-size: 2.2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2; }
+    h2 { font-size: 1.3rem; color: #c792ea; margin: 2.5rem 0 .75rem; }
+    p { margin-bottom: 1.25rem; }
+    ol { margin: 0 0 1.25rem 1.5rem; }
+    ol li { margin-bottom: .75rem; }
+    code { background: #1e1e1e; border: 1px solid #333; border-radius: 3px; padding: .1rem .4rem; font-size: .9em; color: #9cdcfe; font-family: 'Fira Code', Consolas, monospace; }
+    pre { background: #111; border: 1px solid #222; border-radius: 8px; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; font-size: .875rem; line-height: 1.6; }
+    pre code { background: none; border: none; padding: 0; color: #d4d4d4; }
+    .token-group { background: #111; border-left: 3px solid #863bff; padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; margin-bottom: 1rem; }
+    .token-group h3 { color: #fff; font-size: .95rem; margin-bottom: .3rem; }
+    .token-group p { font-size: .875rem; color: #888; margin: 0; }
+    .cta { display: inline-block; margin-top: 1.5rem; padding: .75rem 1.5rem; background: #863bff; color: #fff; border-radius: 6px; font-weight: 600; }
+    .cta:hover { background: #7e14ff; text-decoration: none; }
+    footer { text-align: center; padding: 3rem 2rem; color: #555; font-size: .85rem; border-top: 1px solid #1a1a1a; margin-top: 4rem; }
+    footer a { color: #555; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://joehunter.es/" class="logo" title="Joe Hunter — Desarrollador">
+    <img src="/favicon.svg" alt="Logo de ThemeLab" />
+    ThemeLab
+  </a>
+  <nav>
+    <a href="https://themelab.joehunter.dev/">App</a>
+    <a href="/es/acerca-de.html">Acerca de</a>
+    <a href="/es/editor-temas-vscode.html">Por qué ThemeLab</a>
+    <a href="/en/how-to-create-vscode-themes.html">EN</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Cómo Crear un Tema para VS Code</h1>
+
+  <p>
+    Los temas de VS Code son más potentes de lo que la mayoría de desarrolladores imagina.
+    Bajo el capó, un tema es un único archivo JSON que mapea tokens con nombres a colores hex.
+    Controla los tokens correctos y puedes cambiar el aspecto de cada píxel del editor.
+  </p>
+
+  <p>
+    Esta guía explica cómo funciona el sistema de tokens y cómo usar
+    <a href="https://themelab.joehunter.dev/">ThemeLab</a> para diseñar un tema sin tocar
+    el JSON directamente.
+  </p>
+
+  <h2>1. Entiende los dos grupos de tokens</h2>
+
+  <p>Los temas de VS Code se dividen en dos sistemas distintos:</p>
+
+  <div class="token-group">
+    <h3>Colores del Workbench</h3>
+    <p>Controlan el chrome de la UI — sidebar, barra de actividad, pestañas, barra de estado, paneles. Claves como <code>sideBar.background</code>, <code>activityBar.foreground</code>.</p>
+  </div>
+  <div class="token-group">
+    <h3>Tokens TextMate / Semánticos</h3>
+    <p>Controlan el resaltado de sintaxis dentro del editor — keywords, strings, comentarios, funciones. Usan selectores de scope como <code>keyword.control</code>.</p>
+  </div>
+
+  <h2>2. Estructura mínima de un tema JSON</h2>
+
+<pre><code>{
+  "name": "Mi Tema",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1e1e1e",
+    "editor.foreground": "#d4d4d4",
+    "sideBar.background": "#252526",
+    "activityBar.background": "#333333",
+    "statusBar.background": "#007acc"
+  },
+  "tokenColors": [
+    {
+      "scope": "comment",
+      "settings": { "foreground": "#6a9955" }
+    },
+    {
+      "scope": "keyword",
+      "settings": { "foreground": "#569cd6", "fontStyle": "bold" }
+    }
+  ]
+}</code></pre>
+
+  <h2>3. Grupos de tokens clave</h2>
+
+  <ol>
+    <li><strong>Superficie del editor:</strong> <code>editor.background</code>, <code>editor.foreground</code>, <code>editor.lineHighlightBackground</code></li>
+    <li><strong>Sidebar + explorador:</strong> <code>sideBar.background</code>, <code>sideBarTitle.foreground</code></li>
+    <li><strong>Pestañas:</strong> <code>tab.activeBackground</code>, <code>tab.inactiveBackground</code>, <code>tab.activeForeground</code></li>
+    <li><strong>Barra de actividad:</strong> <code>activityBar.background</code>, <code>activityBarBadge.background</code></li>
+    <li><strong>Barra de estado:</strong> <code>statusBar.background</code>, <code>statusBar.foreground</code></li>
+    <li><strong>Sintaxis — comentarios:</strong> <code>comment</code>, <code>comment.block</code></li>
+    <li><strong>Sintaxis — keywords:</strong> <code>keyword.control</code>, <code>storage.type</code></li>
+    <li><strong>Sintaxis — strings:</strong> <code>string.quoted</code></li>
+  </ol>
+
+  <h2>4. Diseña visualmente con ThemeLab</h2>
+
+  <p>
+    En lugar de editar JSON y recargar VS Code para ver los cambios, ThemeLab renderiza
+    una simulación completa de VS Code en el navegador. Elige colores, ve el resultado al
+    instante en todo el interfaz y exporta el JSON terminado con un clic.
+  </p>
+
+  <a href="https://themelab.joehunter.dev/" class="cta">Diseña tu tema en ThemeLab →</a>
+
+  <h2>5. Instala tu tema en VS Code</h2>
+
+  <ol>
+    <li>Abre VS Code → <code>Ctrl+Shift+P</code> → <em>Preferences: Open Settings (JSON)</em></li>
+    <li>Añade <code>"workbench.colorCustomizations"</code> con tus tokens — o bien</li>
+    <li>Coloca tu JSON exportado en <code>~/.vscode/extensions/mi-tema/</code> con un <code>package.json</code> válido</li>
+    <li>Recarga VS Code y selecciona tu tema desde <em>Preferences: Color Theme</em></li>
+  </ol>
+
+  <h2>Construido por un desarrollador, para desarrolladores</h2>
+
+  <p>
+    ThemeLab fue construido por <a href="https://joehunter.es/">Joe Hunter</a> como demostración
+    de lo que React moderno es capaz de hacer — una simulación de VS Code completamente reactiva
+    sin dependencias nativas. Si te interesa trabajar con Joe, su portfolio está en
+    <a href="https://joehunter.es/">joehunter.es</a>.
+  </p>
+</main>
+
+<footer>
+  <p>ThemeLab por <a href="https://joehunter.es/">Joe Hunter</a> &mdash; <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
+
+</body>
+</html>
