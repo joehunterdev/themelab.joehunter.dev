@@ -39,3 +39,6 @@ jobs:
           force_orphan: true
           allow_empty_commit: true
           commit_message: "build: ${{ github.sha }}"
+
+      - name: Trigger Hostinger webhook
+        run: curl -X POST "https://webhooks.hostinger.com/deploy/43d075e150b6a62783c98af9f14c2e4d"
