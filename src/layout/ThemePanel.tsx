@@ -21,7 +21,16 @@ export default function ThemePanel() {
     <div className="w-72 shrink-0 flex flex-col overflow-hidden border-l border-black/40 bg-zinc-950">
       {/* Header */}
       <div className="px-4 py-3 border-b border-zinc-800 flex items-center justify-between">
-        <span className="text-sm font-semibold text-white">ThemeLab</span>
+        <div className="flex items-center gap-2">
+          <div className="w-7 h-7 rounded overflow-hidden shrink-0">
+            <img
+              src="/logo.png"
+              alt="ThemeLab"
+              style={{ width: '140%', height: '140%', objectFit: 'cover', objectPosition: 'center', marginLeft: '-20%', marginTop: '-20%' }}
+            />
+          </div>
+          <span className="text-sm font-semibold text-white">ThemeLab</span>
+        </div>
         <button
           onClick={handleExport}
           className="text-[11px] px-2 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white transition-colors"
@@ -80,6 +89,39 @@ export default function ThemePanel() {
           <ColorControl label="Tab Bar" value={theme.ui.panel} onChange={(v) => setColor(['ui', 'panel'], v)} />
           <ColorControl label="Tab Indicator" value={theme.ui.tabBorder} onChange={(v) => setColor(['ui', 'tabBorder'], v)} />
         </section>
+      </div>
+
+      {/* Footer — author */}
+      <div className="px-4 py-3 border-t border-zinc-800 flex items-center justify-between">
+        <a
+          href="https://joehunter.es/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Joe Hunter — Developer"
+          className="flex items-center gap-2 group"
+        >
+          <div className="w-6 h-6 rounded overflow-hidden shrink-0">
+            <img
+              src="/logo_jh.png"
+              alt="Joe Hunter"
+              style={{ width: '150%', height: '150%', objectFit: 'cover', objectPosition: 'center', marginLeft: '-25%', marginTop: '-25%' }}
+            />
+          </div>
+          <span className="text-[11px] text-zinc-500 group-hover:text-zinc-300 transition-colors leading-tight">
+            by Joe Hunter
+          </span>
+        </a>
+        <a
+          href="https://github.com/joehunterdev/themelab.joehunter.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="View on GitHub"
+          className="text-zinc-600 hover:text-zinc-300 transition-colors"
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
       </div>
     </div>
   )
