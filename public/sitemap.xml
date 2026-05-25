@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://themelab.joehunter.dev/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/en/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/acerca-de.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/en/vscode-theme-editor.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/vscode-theme-editor.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/editor-temas-vscode.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/en/how-to-create-vscode-themes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/how-to-create-vscode-themes.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/como-crear-temas-vscode.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/es/acerca-de.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/acerca-de.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/about.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/es/editor-temas-vscode.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/editor-temas-vscode.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/vscode-theme-editor.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/es/como-crear-temas-vscode.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/como-crear-temas-vscode.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/how-to-create-vscode-themes.html"/>
+  </url>
+
+
+  <url>
+    <loc>https://themelab.joehunter.dev/en/best-vscode-dark-themes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/best-vscode-dark-themes.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/mejores-temas-oscuros-vscode.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/en/customize-vscode-theme.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/customize-vscode-theme.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/personalizar-tema-vscode.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/es/mejores-temas-oscuros-vscode.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/mejores-temas-oscuros-vscode.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/best-vscode-dark-themes.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/es/personalizar-tema-vscode.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/personalizar-tema-vscode.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/customize-vscode-theme.html"/>
+  </url>
+
+</urlset>

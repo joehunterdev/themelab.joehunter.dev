@@ -1,0 +1,2 @@
+## Content Launch
+The aim is to read my docs, usp and lets prepare this site from an seo content perspective. Lets create a bunch of about articles in spanish and in english, sitemap linked to at the top. Need og data keywords and a readme.md Make it as simple as possible. If u need my logo its in public folder. Need to link to my website joehunter.es/ with the logo. 
