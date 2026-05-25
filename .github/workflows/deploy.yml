@@ -37,4 +37,5 @@ jobs:
           publish_branch: dist
           publish_dir: ./dist
           force_orphan: true
+          allow_empty_commit: true
           commit_message: "build: ${{ github.sha }}"
