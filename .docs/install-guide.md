@@ -1,0 +1,2 @@
+https://simpledev.io/lesson/install-themes-vs-code-1/#:~:text=To%20install%20a%20theme%20on,want%2C%20click%20the%20Install%20button.
+https://dev.to/sohanaakbar7/my-vs-code-setup-for-2026-no-fluff-just-the-extensions-theme-and-settings-i-actually-use-4m51

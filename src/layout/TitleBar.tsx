@@ -233,7 +233,7 @@ export default function TitleBar() {
         className="absolute left-1/2 -translate-x-1/2 text-[11px] opacity-50"
         style={{ color: theme.ui.text }}
       >
-        themelab.joehunter.dev — ThemeLab
+        themelab.joehunter.dev — ThemeLab v{__APP_VERSION__}
       </div>
 
       {/* Window controls */}
