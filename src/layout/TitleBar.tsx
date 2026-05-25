@@ -214,13 +214,8 @@ export default function TitleBar() {
       style={{ background: '#1a1a1a', borderBottom: `1px solid ${theme.ui.border}` }}
     >
       {/* App icon + menu items */}
-<<<<<<< HEAD
-      <div className="flex items-center gap-1 text-[11px] opacity-70" style={{ color: theme.ui.text }}>
-        <a href="https://joehunter.es/" target="_blank" rel="noopener noreferrer" title="Joe Hunter — Developer" className="mr-1">
-=======
       <div className="flex items-center text-[13px]" style={{ color: '#cccccc' }}>
         <a href="https://joehunter.es/" target="_blank" rel="noopener noreferrer" title="Joe Hunter — Developer" className="mr-2">
->>>>>>> main
           <div style={{ width: 24, height: 24, borderRadius: 4, overflow: 'hidden', position: 'relative' }}>
             <img
               src="/logo.png"
@@ -229,16 +224,8 @@ export default function TitleBar() {
             />
           </div>
         </a>
-<<<<<<< HEAD
-        {['File', 'Edit', 'Selection', 'View', 'Go', 'Run', 'Terminal', 'Help'].map((item) => (
-          <span key={item} className="px-2 py-0.5 rounded hover:bg-white/10 cursor-pointer transition-colors">
-            {item}
-          </span>
-        ))}
-=======
         <DropdownMenu label="File" items={FILE_ITEMS} />
         {STATIC_MENUS.map(m => <StaticMenuItem key={m} label={m} />)}
->>>>>>> main
       </div>
 
       {/* Center title */}
