@@ -11,11 +11,11 @@ export default function TitleBar() {
       {/* App icon + menu items */}
       <div className="flex items-center gap-1 text-[11px] opacity-70" style={{ color: theme.ui.text }}>
         <a href="https://joehunter.es/" target="_blank" rel="noopener noreferrer" title="Joe Hunter — Developer" className="mr-1">
-          <div style={{ width: 22, height: 22, borderRadius: 4, overflow: 'hidden', position: 'relative' }}>
+          <div style={{ width: 24, height: 24, borderRadius: 4, overflow: 'hidden', position: 'relative' }}>
             <img
-              src="/logo_jh.png"
+              src="/logo.png"
               alt="Joe Hunter"
-              style={{ width: '170%', height: '170%', objectFit: 'cover', objectPosition: 'center', position: 'absolute', top: '-35%', left: '-35%' }}
+              style={{ width: '130%', height: '130%', objectFit: 'cover', objectPosition: 'center', position: 'absolute', top: '-15%', left: '-15%' }}
             />
           </div>
         </a>
