@@ -22,13 +22,11 @@ export default function ThemePanel() {
       {/* Header */}
       <div className="px-4 py-3 border-b border-zinc-800 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div style={{ width: 32, height: 32, borderRadius: 6, overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
-            <img
+          <img
               src="/logo.png"
               alt="ThemeLab"
-              style={{ width: '160%', height: '160%', objectFit: 'cover', objectPosition: 'center', position: 'absolute', top: '-30%', left: '-30%' }}
+              style={{ width: 32, height: 32, borderRadius: 6, objectFit: 'cover', objectPosition: 'center', flexShrink: 0, display: 'block' }}
             />
-          </div>
           <span className="text-sm font-semibold text-white">ThemeLab</span>
         </div>
         <button
@@ -100,13 +98,11 @@ export default function ThemePanel() {
           title="Joe Hunter — Developer"
           className="flex items-center gap-2 group"
         >
-          <div className="w-6 h-6 rounded overflow-hidden shrink-0">
-            <img
+          <img
               src="/logo_jh.png"
               alt="Joe Hunter"
-              style={{ width: '150%', height: '150%', objectFit: 'cover', objectPosition: 'center', marginLeft: '-25%', marginTop: '-25%' }}
+              style={{ width: 24, height: 24, borderRadius: 4, objectFit: 'cover', objectPosition: 'center', flexShrink: 0, display: 'block' }}
             />
-          </div>
           <span className="text-[11px] text-zinc-500 group-hover:text-zinc-300 transition-colors leading-tight">
             by Joe Hunter
           </span>
