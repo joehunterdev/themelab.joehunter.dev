@@ -122,4 +122,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/create-your-own-signature-vscode-theme.html"/>
   </url>
 
+  <url>
+    <loc>https://themelab.joehunter.dev/en/battle-of-the-ides.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/battle-of-the-ides.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/batalla-de-los-ides.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/es/batalla-de-los-ides.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/batalla-de-los-ides.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/battle-of-the-ides.html"/>
+  </url>
+
 </urlset>
