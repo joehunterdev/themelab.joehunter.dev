@@ -90,4 +90,36 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/customize-vscode-theme.html"/>
   </url>
 
+  <url>
+    <loc>https://themelab.joehunter.dev/en/why-editing-vscode-themes-via-json-is-a-nightmare.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/why-editing-vscode-themes-via-json-is-a-nightmare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/por-que-editar-temas-vscode-en-json-es-un-infierno.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/es/por-que-editar-temas-vscode-en-json-es-un-infierno.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/por-que-editar-temas-vscode-en-json-es-un-infierno.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/why-editing-vscode-themes-via-json-is-a-nightmare.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/en/create-your-own-signature-vscode-theme.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/create-your-own-signature-vscode-theme.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/crea-tu-propio-tema-vscode-personalizado.html"/>
+  </url>
+
+  <url>
+    <loc>https://themelab.joehunter.dev/es/crea-tu-propio-tema-vscode-personalizado.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/crea-tu-propio-tema-vscode-personalizado.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/create-your-own-signature-vscode-theme.html"/>
+  </url>
+
 </urlset>
