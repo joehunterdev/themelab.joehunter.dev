@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "postbuild": "node -e \"const fs=require('fs');['en','es'].forEach(d=>{fs.cpSync('content/'+d,'dist/'+d,{recursive:true,force:true})});fs.copyFileSync('content/content.css','dist/content.css');console.log('Content copied to dist')\"",
     "lint": "eslint .",
     "preview": "vite preview"
   },
