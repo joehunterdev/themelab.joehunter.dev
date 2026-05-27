@@ -1,24 +1,24 @@
-﻿﻿<!DOCTYPE html>
+??<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CÃ³mo Crear un Tema para VS Code â€” GuÃ­a ThemeLab</title>
-  <meta name="description" content="Aprende a crear un tema personalizado para VS Code desde cero. Entiende los grupos de tokens, roles de color y cÃ³mo exportar un JSON vÃ¡lido. GuÃ­a por Joe Hunter." />
+  <title>Cómo Crear un Tema para VS Code — Guía ThemeLab</title>
+  <meta name="description" content="Aprende a crear un tema personalizado para VS Code desde cero. Entiende los grupos de tokens, roles de color y cómo exportar un JSON válido. Guía por Joe Hunter." />
   <link rel="canonical" href="https://themelab.joehunter.dev/es/como-crear-temas-vscode.html" />
   <link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/how-to-create-vscode-themes.html" />
   <link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/como-crear-temas-vscode.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="CÃ³mo Crear un Tema para VS Code â€” GuÃ­a ThemeLab" />
-  <meta property="og:description" content="Aprende cÃ³mo funcionan los tokens de tema de VS Code y cÃ³mo diseÃ±ar el tuyo propio con ThemeLab â€” sin editar JSON." />
+  <meta property="og:title" content="Cómo Crear un Tema para VS Code — Guía ThemeLab" />
+  <meta property="og:description" content="Aprende cómo funcionan los tokens de tema de VS Code y cómo diseñar el tuyo propio con ThemeLab — sin editar JSON." />
   <meta property="og:url" content="https://themelab.joehunter.dev/es/como-crear-temas-vscode.html" />
   <meta property="og:site_name" content="ThemeLab" />
   <meta property="og:image" content="https://themelab.joehunter.dev/example.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CÃ³mo Crear un Tema para VS Code â€” GuÃ­a ThemeLab" />
-  <meta name="twitter:description" content="GuÃ­a prÃ¡ctica sobre tokens de tema de VS Code y cÃ³mo usar ThemeLab para diseÃ±ar el tuyo." />
+  <meta name="twitter:title" content="Cómo Crear un Tema para VS Code — Guía ThemeLab" />
+  <meta name="twitter:description" content="Guía práctica sobre tokens de tema de VS Code y cómo usar ThemeLab para diseñar el tuyo." />
   <meta name="twitter:image" content="https://themelab.joehunter.dev/example.png" />
-  <meta name="keywords" content="cÃ³mo crear tema VS Code, tutorial tema VS Code, tokens tema VS Code, tema VS Code personalizado, personalizar colores VS Code" />
+  <meta name="keywords" content="cómo crear tema VS Code, tutorial tema VS Code, tokens tema VS Code, tema VS Code personalizado, personalizar colores VS Code" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -50,31 +50,31 @@
 <body>
 
 <header>
-  <a href="https://joehunter.es/" class="logo" title="Joe Hunter â€” Desarrollador">
+  <a href="https://joehunter.es/" class="logo" title="Joe Hunter — Desarrollador">
     <img src="/favicon.svg" alt="Logo de ThemeLab" />
     ThemeLab
   </a>
   <nav>
     <a href="https://themelab.joehunter.dev/">App</a>
     <a href="/es/acerca-de.html">Acerca de</a>
-    <a href="/es/editor-temas-vscode.html">Por quÃ© ThemeLab</a>
+    <a href="/es/editor-temas-vscode.html">Por qué ThemeLab</a>
     <a href="/en/how-to-create-vscode-themes.html">EN</a>
     <a href="/sitemap.xml">Sitemap</a>
   </nav>
 </header>
 
 <main>
-  <h1>CÃ³mo Crear un Tema para VS Code</h1>
+  <h1>Cómo Crear un Tema para VS Code</h1>
 
   <p>
-    Los temas de VS Code son mÃ¡s potentes de lo que la mayorÃ­a de desarrolladores imagina.
-    Bajo el capÃ³, un tema es un Ãºnico archivo JSON que mapea tokens con nombres a colores hex.
-    Controla los tokens correctos y puedes cambiar el aspecto de cada pÃ­xel del editor.
+    Los temas de VS Code son más potentes de lo que la mayoría de desarrolladores imagina.
+    Bajo el capó, un tema es un único archivo JSON que mapea tokens con nombres a colores hex.
+    Controla los tokens correctos y puedes cambiar el aspecto de cada píxel del editor.
   </p>
 
   <p>
-    Esta guÃ­a explica cÃ³mo funciona el sistema de tokens y cÃ³mo usar
-    <a href="https://themelab.joehunter.dev/">ThemeLab</a> para diseÃ±ar un tema sin tocar
+    Esta guía explica cómo funciona el sistema de tokens y cómo usar
+    <a href="https://themelab.joehunter.dev/">ThemeLab</a> para diseñar un tema sin tocar
     el JSON directamente.
   </p>
 
@@ -84,14 +84,14 @@
 
   <div class="token-group">
     <h3>Colores del Workbench</h3>
-    <p>Controlan el chrome de la UI â€” sidebar, barra de actividad, pestaÃ±as, barra de estado, paneles. Claves como <code>sideBar.background</code>, <code>activityBar.foreground</code>.</p>
+    <p>Controlan el chrome de la UI — sidebar, barra de actividad, pestañas, barra de estado, paneles. Claves como <code>sideBar.background</code>, <code>activityBar.foreground</code>.</p>
   </div>
   <div class="token-group">
-    <h3>Tokens TextMate / SemÃ¡nticos</h3>
-    <p>Controlan el resaltado de sintaxis dentro del editor â€” keywords, strings, comentarios, funciones. Usan selectores de scope como <code>keyword.control</code>.</p>
+    <h3>Tokens TextMate / Semánticos</h3>
+    <p>Controlan el resaltado de sintaxis dentro del editor — keywords, strings, comentarios, funciones. Usan selectores de scope como <code>keyword.control</code>.</p>
   </div>
 
-  <h2>2. Estructura mÃ­nima de un tema JSON</h2>
+  <h2>2. Estructura mínima de un tema JSON</h2>
 
 <pre><code>{
   "name": "Mi Tema",
@@ -120,39 +120,39 @@
   <ol>
     <li><strong>Superficie del editor:</strong> <code>editor.background</code>, <code>editor.foreground</code>, <code>editor.lineHighlightBackground</code></li>
     <li><strong>Sidebar + explorador:</strong> <code>sideBar.background</code>, <code>sideBarTitle.foreground</code></li>
-    <li><strong>PestaÃ±as:</strong> <code>tab.activeBackground</code>, <code>tab.inactiveBackground</code>, <code>tab.activeForeground</code></li>
+    <li><strong>Pestañas:</strong> <code>tab.activeBackground</code>, <code>tab.inactiveBackground</code>, <code>tab.activeForeground</code></li>
     <li><strong>Barra de actividad:</strong> <code>activityBar.background</code>, <code>activityBarBadge.background</code></li>
     <li><strong>Barra de estado:</strong> <code>statusBar.background</code>, <code>statusBar.foreground</code></li>
-    <li><strong>Sintaxis â€” comentarios:</strong> <code>comment</code>, <code>comment.block</code></li>
-    <li><strong>Sintaxis â€” keywords:</strong> <code>keyword.control</code>, <code>storage.type</code></li>
-    <li><strong>Sintaxis â€” strings:</strong> <code>string.quoted</code></li>
+    <li><strong>Sintaxis — comentarios:</strong> <code>comment</code>, <code>comment.block</code></li>
+    <li><strong>Sintaxis — keywords:</strong> <code>keyword.control</code>, <code>storage.type</code></li>
+    <li><strong>Sintaxis — strings:</strong> <code>string.quoted</code></li>
   </ol>
 
-  <h2>4. DiseÃ±a visualmente con ThemeLab</h2>
+  <h2>4. Diseña visualmente con ThemeLab</h2>
 
   <p>
     En lugar de editar JSON y recargar VS Code para ver los cambios, ThemeLab renderiza
-    una simulaciÃ³n completa de VS Code en el navegador. Elige colores, ve el resultado al
+    una simulación completa de VS Code en el navegador. Elige colores, ve el resultado al
     instante en todo el interfaz y exporta el JSON terminado con un clic.
   </p>
 
-  <a href="https://themelab.joehunter.dev/" class="cta">DiseÃ±a tu tema en ThemeLab â†’</a>
+  <a href="https://themelab.joehunter.dev/" class="cta">Diseña tu tema en ThemeLab →</a>
 
   <h2>5. Instala tu tema en VS Code</h2>
 
   <ol>
-    <li>Abre VS Code â†’ <code>Ctrl+Shift+P</code> â†’ <em>Preferences: Open Settings (JSON)</em></li>
-    <li>AÃ±ade <code>"workbench.colorCustomizations"</code> con tus tokens â€” o bien</li>
-    <li>Coloca tu JSON exportado en <code>~/.vscode/extensions/mi-tema/</code> con un <code>package.json</code> vÃ¡lido</li>
+    <li>Abre VS Code → <code>Ctrl+Shift+P</code> → <em>Preferences: Open Settings (JSON)</em></li>
+    <li>Añade <code>"workbench.colorCustomizations"</code> con tus tokens — o bien</li>
+    <li>Coloca tu JSON exportado en <code>~/.vscode/extensions/mi-tema/</code> con un <code>package.json</code> válido</li>
     <li>Recarga VS Code y selecciona tu tema desde <em>Preferences: Color Theme</em></li>
   </ol>
 
   <h2>Construido por un desarrollador, para desarrolladores</h2>
 
   <p>
-    ThemeLab fue construido por <a href="https://joehunter.es/">Joe Hunter</a> como demostraciÃ³n
-    de lo que React moderno es capaz de hacer â€” una simulaciÃ³n de VS Code completamente reactiva
-    sin dependencias nativas. Si te interesa trabajar con Joe, su portfolio estÃ¡ en
+    ThemeLab fue construido por <a href="https://joehunter.es/">Joe Hunter</a> como demostración
+    de lo que React moderno es capaz de hacer — una simulación de VS Code completamente reactiva
+    sin dependencias nativas. Si te interesa trabajar con Joe, su portfolio está en
     <a href="https://joehunter.es/">joehunter.es</a>.
   </p>
 </main>

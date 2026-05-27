@@ -1,22 +1,22 @@
-﻿﻿<!DOCTYPE html>
+??<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CÃ³mo Personalizar tu Tema de VS Code â€” GuÃ­a ThemeLab</title>
-  <meta name="description" content="GuÃ­a prÃ¡ctica para personalizar tu tema de VS Code â€” desde cambios rÃ¡pidos en settings.json hasta construir un tema completo con ThemeLab. Por Joe Hunter." />
+  <title>Cómo Personalizar tu Tema de VS Code — Guía ThemeLab</title>
+  <meta name="description" content="Guía práctica para personalizar tu tema de VS Code — desde cambios rápidos en settings.json hasta construir un tema completo con ThemeLab. Por Joe Hunter." />
   <link rel="canonical" href="https://themelab.joehunter.dev/es/personalizar-tema-vscode.html" />
   <link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/customize-vscode-theme.html" />
   <link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/personalizar-tema-vscode.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="CÃ³mo Personalizar tu Tema de VS Code â€” GuÃ­a ThemeLab" />
-  <meta property="og:description" content="Cambios rÃ¡pidos en settings.json, personalizaciÃ³n de tokens y construcciÃ³n de temas completos con ThemeLab. GuÃ­a prÃ¡ctica por Joe Hunter." />
+  <meta property="og:title" content="Cómo Personalizar tu Tema de VS Code — Guía ThemeLab" />
+  <meta property="og:description" content="Cambios rápidos en settings.json, personalización de tokens y construcción de temas completos con ThemeLab. Guía práctica por Joe Hunter." />
   <meta property="og:url" content="https://themelab.joehunter.dev/es/personalizar-tema-vscode.html" />
   <meta property="og:site_name" content="ThemeLab" />
   <meta property="og:image" content="https://themelab.joehunter.dev/example.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CÃ³mo Personalizar tu Tema de VS Code â€” ThemeLab" />
-  <meta name="twitter:description" content="De cambios rÃ¡pidos a construir tu propio tema â€” guÃ­a prÃ¡ctica de personalizaciÃ³n de VS Code." />
+  <meta name="twitter:title" content="Cómo Personalizar tu Tema de VS Code — ThemeLab" />
+  <meta name="twitter:description" content="De cambios rápidos a construir tu propio tema — guía práctica de personalización de VS Code." />
   <meta name="twitter:image" content="https://themelab.joehunter.dev/example.png" />
   <meta name="keywords" content="personalizar tema VS Code, colores VS Code settings.json, personalizar colores VS Code, workbench colorCustomizations, tokens VS Code" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -48,7 +48,7 @@
 <body>
 
 <header>
-  <a href="https://joehunter.es/" class="logo" title="Joe Hunter â€” Desarrollador">
+  <a href="https://joehunter.es/" class="logo" title="Joe Hunter — Desarrollador">
     <img src="/favicon.svg" alt="Logo de ThemeLab" />
     ThemeLab
   </a>
@@ -62,19 +62,19 @@
 </header>
 
 <main>
-  <h1>CÃ³mo Personalizar tu Tema de VS Code</h1>
+  <h1>Cómo Personalizar tu Tema de VS Code</h1>
 
   <p>
-    No tienes por quÃ© vivir con un tema exactamente como otra persona lo diseÃ±Ã³. VS Code
-    tiene tres niveles de personalizaciÃ³n de temas â€” desde un cambio rÃ¡pido de un color
-    hasta construir algo completamente tuyo. AsÃ­ funciona cada uno.
+    No tienes por qué vivir con un tema exactamente como otra persona lo diseñó. VS Code
+    tiene tres niveles de personalización de temas — desde un cambio rápido de un color
+    hasta construir algo completamente tuyo. Así funciona cada uno.
   </p>
 
-  <h2>Nivel 1 â€” Cambio rÃ¡pido en settings.json</h2>
+  <h2>Nivel 1 — Cambio rápido en settings.json</h2>
 
   <p>
-    La forma mÃ¡s rÃ¡pida. Abre los ajustes de VS Code (<code>Ctrl+Shift+P</code> â†’
-    <em>Preferences: Open User Settings (JSON)</em>) y aÃ±ade un bloque
+    La forma más rápida. Abre los ajustes de VS Code (<code>Ctrl+Shift+P</code> →
+    <em>Preferences: Open User Settings (JSON)</em>) y añade un bloque
     <code>workbench.colorCustomizations</code>:
   </p>
 
@@ -88,19 +88,19 @@
 }</code></pre>
 
   <p>
-    Los cambios se aplican al instante. Esto sobreescribe el tema activo sin reemplazarlo â€”
+    Los cambios se aplican al instante. Esto sobreescribe el tema activo sin reemplazarlo —
     mantienes todo el resaltado de sintaxis y solo cambias lo que quieres.
   </p>
 
   <div class="tip">
-    ðŸ’¡ Estas sobreescrituras se apilan sobre cualquier tema instalado. Perfecto para arreglar
+    💡 Estas sobreescrituras se apilan sobre cualquier tema instalado. Perfecto para arreglar
     una o dos cosas que no te gustan sin empezar desde cero.
   </div>
 
-  <h2>Nivel 2 â€” Personalizar los colores de tokens de sintaxis</h2>
+  <h2>Nivel 2 — Personalizar los colores de tokens de sintaxis</h2>
 
   <p>
-    Para cambiar el aspecto del cÃ³digo dentro del editor, usa <code>editor.tokenColorCustomizations</code>:
+    Para cambiar el aspecto del código dentro del editor, usa <code>editor.tokenColorCustomizations</code>:
   </p>
 
 <pre><code>{
@@ -114,7 +114,7 @@
 }</code></pre>
 
   <p>
-    Para un control mÃ¡s fino, usa la clave <code>textMateRules</code> para apuntar a scopes especÃ­ficos:
+    Para un control más fino, usa la clave <code>textMateRules</code> para apuntar a scopes específicos:
   </p>
 
 <pre><code>{
@@ -131,46 +131,46 @@
   }
 }</code></pre>
 
-  <h2>Nivel 3 â€” Construye un tema completo con ThemeLab</h2>
+  <h2>Nivel 3 — Construye un tema completo con ThemeLab</h2>
 
   <p>
     Si acumulas muchas sobreescrituras, has escrito efectivamente un tema. En ese punto
-    es mÃ¡s limpio diseÃ±ar uno correctamente y exportar un archivo JSON independiente.
+    es más limpio diseñar uno correctamente y exportar un archivo JSON independiente.
   </p>
 
   <p>
-    <a href="https://themelab.joehunter.dev/">ThemeLab</a> hace esto visual â€” ves el shell
-    completo de VS Code reaccionar a cada cambio de color en tiempo real, sin adivinar cÃ³mo
-    quedarÃ¡n los tokens, viendo exactamente el aspecto del editor mientras diseÃ±as.
+    <a href="https://themelab.joehunter.dev/">ThemeLab</a> hace esto visual — ves el shell
+    completo de VS Code reaccionar a cada cambio de color en tiempo real, sin adivinar cómo
+    quedarán los tokens, viendo exactamente el aspecto del editor mientras diseñas.
   </p>
 
   <ol>
     <li>Abre ThemeLab en el navegador</li>
     <li>Ajusta los colores del chrome de UI y los tokens de sintaxis</li>
     <li>Exporta <code>theme.json</code></li>
-    <li>ColÃ³calo en <code>~/.vscode/extensions/mi-tema/</code> con un <code>package.json</code></li>
-    <li>SelecciÃ³nalo desde <em>Preferences: Color Theme</em></li>
+    <li>Colócalo en <code>~/.vscode/extensions/mi-tema/</code> con un <code>package.json</code></li>
+    <li>Selecciónalo desde <em>Preferences: Color Theme</em></li>
   </ol>
 
-  <a href="https://themelab.joehunter.dev/" class="cta">Abrir ThemeLab â†’</a>
+  <a href="https://themelab.joehunter.dev/" class="cta">Abrir ThemeLab →</a>
 
-  <h2>Tokens de referencia mÃ¡s Ãºtiles</h2>
+  <h2>Tokens de referencia más útiles</h2>
 
   <ul>
-    <li><code>editor.background</code> â€” lienzo principal del editor</li>
-    <li><code>editor.selectionBackground</code> â€” color de la selecciÃ³n resaltada</li>
-    <li><code>editor.lineHighlightBackground</code> â€” lÃ­nea actual en el gutter</li>
-    <li><code>editorCursor.foreground</code> â€” color del cursor</li>
-    <li><code>sideBar.background</code> â€” panel del explorador de archivos</li>
-    <li><code>tab.activeBackground</code> â€” pestaÃ±a actualmente abierta</li>
-    <li><code>statusBar.background</code> â€” barra de informaciÃ³n inferior</li>
-    <li><code>terminal.background</code> â€” terminal integrado</li>
+    <li><code>editor.background</code> — lienzo principal del editor</li>
+    <li><code>editor.selectionBackground</code> — color de la selección resaltada</li>
+    <li><code>editor.lineHighlightBackground</code> — línea actual en el gutter</li>
+    <li><code>editorCursor.foreground</code> — color del cursor</li>
+    <li><code>sideBar.background</code> — panel del explorador de archivos</li>
+    <li><code>tab.activeBackground</code> — pestaña actualmente abierta</li>
+    <li><code>statusBar.background</code> — barra de información inferior</li>
+    <li><code>terminal.background</code> — terminal integrado</li>
   </ul>
 
   <p>
-    Por <a href="https://joehunter.es/">Joe Hunter</a> â€”
-    ver <a href="/es/como-crear-temas-vscode.html">la guÃ­a completa para crear un tema de VS Code</a>
-    para mÃ¡s informaciÃ³n sobre el sistema de tokens.
+    Por <a href="https://joehunter.es/">Joe Hunter</a> —
+    ver <a href="/es/como-crear-temas-vscode.html">la guía completa para crear un tema de VS Code</a>
+    para más información sobre el sistema de tokens.
   </p>
 </main>
 
