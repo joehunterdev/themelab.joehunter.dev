@@ -1,21 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Create a VS Code Theme — ThemeLab Guide</title>
+  <title>How to Create a VS Code Theme â€” ThemeLab Guide</title>
   <meta name="description" content="Learn how to create a custom VS Code theme from scratch. Understand token groups, colour roles and how to export a valid theme JSON. Guide by Joe Hunter." />
   <link rel="canonical" href="https://themelab.joehunter.dev/en/how-to-create-vscode-themes.html" />
   <link rel="alternate" hreflang="es" href="https://themelab.joehunter.dev/es/como-crear-temas-vscode.html" />
   <link rel="alternate" hreflang="en" href="https://themelab.joehunter.dev/en/how-to-create-vscode-themes.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="How to Create a VS Code Theme — ThemeLab Guide" />
-  <meta property="og:description" content="Learn how VS Code theme tokens work and how to design your own theme using ThemeLab — no JSON editing required." />
+  <meta property="og:title" content="How to Create a VS Code Theme â€” ThemeLab Guide" />
+  <meta property="og:description" content="Learn how VS Code theme tokens work and how to design your own theme using ThemeLab â€” no JSON editing required." />
   <meta property="og:url" content="https://themelab.joehunter.dev/en/how-to-create-vscode-themes.html" />
   <meta property="og:site_name" content="ThemeLab" />
   <meta property="og:image" content="https://themelab.joehunter.dev/example.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="How to Create a VS Code Theme — ThemeLab Guide" />
+  <meta name="twitter:title" content="How to Create a VS Code Theme â€” ThemeLab Guide" />
   <meta name="twitter:description" content="A practical guide to VS Code theme tokens and how to use ThemeLab to design your own." />
   <meta name="twitter:image" content="https://themelab.joehunter.dev/example.png" />
   <meta name="keywords" content="how to create a VS Code theme, VS Code theme tutorial, VS Code theme tokens, custom VS Code theme, VS Code color customization" />
@@ -50,8 +50,8 @@
 <body>
 
 <header>
-  <a href="https://joehunter.es/" class="logo" title="Joe Hunter — Developer">
-    <img src="/favicon.svg" alt="ThemeLab logo" />
+  <a href="https://joehunter.es/" class="logo" title="Joe Hunter â€” Developer">
+    <img src="/logo.png" alt="ThemeLab" style="width:32px;height:32px;border-radius:6px;object-fit:cover;" />
     ThemeLab
   </a>
   <nav>
@@ -83,11 +83,11 @@
 
   <div class="token-group">
     <h3>Workbench colours</h3>
-    <p>Control the UI chrome — sidebar, activity bar, tabs, status bar, panels. Keys like <code>sideBar.background</code>, <code>activityBar.foreground</code>.</p>
+    <p>Control the UI chrome â€” sidebar, activity bar, tabs, status bar, panels. Keys like <code>sideBar.background</code>, <code>activityBar.foreground</code>.</p>
   </div>
   <div class="token-group">
     <h3>TextMate / Semantic tokens</h3>
-    <p>Control syntax highlighting inside the editor — keywords, strings, comments, functions. These use scope selectors like <code>keyword.control</code>.</p>
+    <p>Control syntax highlighting inside the editor â€” keywords, strings, comments, functions. These use scope selectors like <code>keyword.control</code>.</p>
   </div>
 
   <h2>2. A minimal theme JSON structure</h2>
@@ -122,9 +122,9 @@
     <li><strong>Tabs:</strong> <code>tab.activeBackground</code>, <code>tab.inactiveBackground</code>, <code>tab.activeForeground</code></li>
     <li><strong>Activity bar:</strong> <code>activityBar.background</code>, <code>activityBarBadge.background</code></li>
     <li><strong>Status bar:</strong> <code>statusBar.background</code>, <code>statusBar.foreground</code></li>
-    <li><strong>Syntax — comments:</strong> <code>comment</code>, <code>comment.block</code></li>
-    <li><strong>Syntax — keywords:</strong> <code>keyword.control</code>, <code>storage.type</code></li>
-    <li><strong>Syntax — strings:</strong> <code>string.quoted</code></li>
+    <li><strong>Syntax â€” comments:</strong> <code>comment</code>, <code>comment.block</code></li>
+    <li><strong>Syntax â€” keywords:</strong> <code>keyword.control</code>, <code>storage.type</code></li>
+    <li><strong>Syntax â€” strings:</strong> <code>string.quoted</code></li>
   </ol>
 
   <h2>4. Design visually with ThemeLab</h2>
@@ -135,13 +135,13 @@
     entire UI, then export the finished JSON in one click.
   </p>
 
-  <a href="https://themelab.joehunter.dev/" class="cta">Design your theme in ThemeLab →</a>
+  <a href="https://themelab.joehunter.dev/" class="cta">Design your theme in ThemeLab â†’</a>
 
   <h2>5. Install your theme in VS Code</h2>
 
   <ol>
-    <li>Open VS Code → <code>Ctrl+Shift+P</code> → <em>Preferences: Open Settings (JSON)</em></li>
-    <li>Add <code>"workbench.colorCustomizations"</code> with your tokens — or</li>
+    <li>Open VS Code â†’ <code>Ctrl+Shift+P</code> â†’ <em>Preferences: Open Settings (JSON)</em></li>
+    <li>Add <code>"workbench.colorCustomizations"</code> with your tokens â€” or</li>
     <li>Place your exported JSON in <code>~/.vscode/extensions/my-theme/</code> with a valid <code>package.json</code></li>
     <li>Reload VS Code and select your theme from <em>Preferences: Color Theme</em></li>
   </ol>
@@ -150,7 +150,7 @@
 
   <p>
     ThemeLab was built by <a href="https://joehunter.es/">Joe Hunter</a> as a demonstration of
-    what modern React can do — a fully reactive VS Code simulation with zero native dependencies.
+    what modern React can do â€” a fully reactive VS Code simulation with zero native dependencies.
     If you're interested in working with Joe, his portfolio is at
     <a href="https://joehunter.es/">joehunter.es</a>.
   </p>
@@ -162,3 +162,4 @@
 
 </body>
 </html>
+
